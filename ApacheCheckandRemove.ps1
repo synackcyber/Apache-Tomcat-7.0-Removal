@@ -39,9 +39,9 @@ if ($getfile -gt 1) {
 $regtestpath = test-path -path "HKLM:\SYSTEM\CurrentControlSet\Services\Tomcat7"
 
 if ($regtestpath) {
-    reg export 'HKLM:\SYSTEM\CurrentControlSet\Services\Tomcat7' C:\Temp\apacheRegKey_bak.reg
+    reg export 'HKLM\SYSTEM\CurrentControlSet\Services\Tomcat7' C:\Temp\apacheRegKey_bak.reg
     Start-Sleep -Seconds 5
-    Remove-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Tomcat7" -Recurse -Force
+    Remove-Item -Path "HKLM\SYSTEM\CurrentControlSet\Services\Tomcat7" -Recurse -Force
     Write-Host "Registry entry has been backed up to C:\Temp and deleted. Please reboot PC at earliest convenience to remove Apache7 from services list."
 }
     else {
