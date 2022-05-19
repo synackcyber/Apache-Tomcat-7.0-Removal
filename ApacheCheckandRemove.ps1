@@ -25,7 +25,7 @@ if ( $logcondition )
 ## File date check Vars
 $days_to_check = $(Get-Date).AddDays(-365)
 $getfile = Get-Item "C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\logs\*.*" | where { $_.LastWriteTime -gt $days_to_check } | Foreach {
-“File Name: ” + $_.Name
+â€œFile Name: â€ + $_.Name
 }
 
 ## Check if apache log files have been updated/modified in the past year. Everytime the TomCat7 service starts the logfile date is updated.
